@@ -6,7 +6,6 @@
         var url = tab.url;
     });
 });
-//alert("Background script start.");
 var count = 10;
 var likesCount = 0;
 var maxType = "Likes";
@@ -158,8 +157,6 @@ function loadUsersSex(cur_count, ids, limit, j) {
 function setPrBar(j) {
     var k = likesCount / 1000;
     if (likesCount % 1000 != 0) k += 1;
-    //document.getElementById('prbar').style='width:' + j*100/k +'%';
-    //$('.progress-bar').css('width', j*100/k +'%').attr('aria-valuenow', j*100/k); 
 }
 
 function renderStatus(statusText) {
@@ -190,7 +187,6 @@ function runModule(currPostID) {
 };
 chrome.runtime.onMessage.addListener(
   function (req, sender, sendResponse) {
-      //alert("Background script Message Here.");
       if (req.mesType == "giveIds") {
           IDs = JSON.parse(req.ids);
           idIndex = 0;
